@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="bower_components/bootstrap-css-only/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+        <link href="style.css" type="text/css" rel="stylesheet" />
+
+        <style>
+            label {
+                margin-top: 20px;
+                font-weight: normal;
+            }
+            .container.main {
+                margin-top: 50px;
+            }
+            ul.nav {
+                width: 100%;
+            }
+            img {
+                width: 200px; 
+                height: auto; 
+                margin-top: 20px;
+                float: right;
+            }
+            input.ng-invalid.ng-dirty {
+                background-color: #fcc;
+            }
+
+        </style>
+
+    </head>
+    <body ng-app="myApp">
+ 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#!/home">Home</a></li>
+                    <li><a href="#!/page1">Hur gammal är du?</a></li>
+                    <li><a href="#!/page2">Fyller du år?</a></li>
+                    <li><a href="#!/cities">Städer</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main">
+        <div class="row">
+            <div class="col-xs-6">
+                <ui-view></ui-view>
+            </div>
+            <div class="col-xs-3">
+                <img ng-if="x.img" src="{{x.img}}" class="thumbnail">   
+            </div>
+            
+        </div>
+    </div>
+   
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="script.js"></script>
+
+
+    </body>
+</html>

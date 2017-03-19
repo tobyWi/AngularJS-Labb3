@@ -1,0 +1,13 @@
+<div ng-controller="birthdayController">
+	<h1>Är det din födelsedag?</h1>
+	<div ng-if="birthday()">
+		<h2>Ja det gör du!</h2>
+		<p>Hoppas du får en fantastisk födelsedag!</p>
+	</div>
+	<div ng-if="!x.ssn">
+		<p>Du har inte fyllt i personnummer!</p>
+	</div>
+	<div ng-if="x.ssn && !birthday()">
+		<h3>Nej tyvärr!</h3>
+	</div>
+</div>

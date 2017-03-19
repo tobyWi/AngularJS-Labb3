@@ -1,0 +1,9 @@
+<div ng-controller="ageController">
+	<h1>Hur gammal är du?</h1>
+	<div ng-if="x.ssn">
+		<h3>Du är {{age()}} år gammal!</h3>
+			</div>
+	<div ng-if="!x.ssn">
+		<p>Du har inte fyllt i personnummer!</p>
+	</div>
+</div>

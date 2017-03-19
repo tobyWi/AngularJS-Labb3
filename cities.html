@@ -1,0 +1,16 @@
+<h1>Städer</h1>	
+
+<div ng-controller="citiesController">
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="city in cities | orderBy : '- population'">{{city.name}} <span class="badge">{{city.population}}</span></li>
+	</ul>
+
+	<h3>Lägg till stad</h3>
+	<form name="citiesForm" novalidate>
+		<input type="text" ng-model="newCity" required>
+		<input type="number" ng-model="newPopulation" required>
+		<input type="submit" ng-click="addCity()">
+	</form>
+</div>
+
+	
